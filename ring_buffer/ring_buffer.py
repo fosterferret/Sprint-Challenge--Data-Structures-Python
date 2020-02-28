@@ -20,7 +20,10 @@ class RingBuffer:
         list_buffer_contents = []
 
         # TODO: Your code here
-
+        curr_node = self.storage.head
+        while curr_node:
+            list_buffer_contents.append(curr_node.value)
+            curr_node = curr_node.next
         return list_buffer_contents
 
 # ----------------Stretch Goal-------------------
