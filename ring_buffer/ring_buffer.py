@@ -43,3 +43,6 @@ class ArrayRingBuffer:
 
     def get(self):
         return list(filter(None, self.storage))
+
+
+# With arrays, accessing elements occurs in constant time while you get linear time for linked lists. However, deletion and insertion operations are not as efficient in arrays since they involve a lot of migrations.
