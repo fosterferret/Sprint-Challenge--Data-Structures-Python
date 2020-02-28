@@ -19,7 +19,7 @@ duplicates = []  # Return the list of duplicates in this data structure
 #             duplicates.append(name_1)
 
 
-#MY OPTIMIZATION
+#MY OPTIMIZATION .014 sec vs 7 seconds for the unoptimized version
 # cache = {}
 # for name in names_1:
 #     if name not in cache:
@@ -36,7 +36,8 @@ duplicates = []  # Return the list of duplicates in this data structure
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
 
-duplicates = list(set(names_1).intersection(names_2))
+duplicates = list(set(names_1).intersection(names_2)) #runtime: 0.008610963821411133 seconds
+
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
