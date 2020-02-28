@@ -20,21 +20,23 @@ duplicates = []  # Return the list of duplicates in this data structure
 
 
 #MY OPTIMIZATION
-cache = {}
-for name in names_1:
-    if name not in cache:
-        cache[name] = name
+# cache = {}
+# for name in names_1:
+#     if name not in cache:
+#         cache[name] = name
 
 
-for name in names_2:
-    if name in cache:
-        duplicates.append(name)
+# for name in names_2:
+#     if name in cache:
+#         duplicates.append(name)
 
 
 # ---------- Stretch Goal -----------
 # Python has built-in tools that allow for a very efficient approach to this problem
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
+
+duplicates = list(set(names_1).intersection(names_2))
 
 end_time = time.time()
 print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
