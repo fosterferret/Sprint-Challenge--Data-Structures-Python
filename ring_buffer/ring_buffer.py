@@ -42,4 +42,4 @@ class ArrayRingBuffer:
             self.current = 0
 
     def get(self):
-        pass
+        return list(filter(None, self.storage))
