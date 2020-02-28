@@ -1,4 +1,5 @@
 import time
+from binary_search_tree import BinarySearchTree
 
 start_time = time.time()
 
@@ -19,7 +20,18 @@ duplicates = []  # Return the list of duplicates in this data structure
 #             duplicates.append(name_1)
 
 
-#MY OPTIMIZATION .014 sec vs 7 seconds for the unoptimized version
+# MY OPTIMIZATION-1 runtime: 0.20632314682006836 seconds
+# bst = BinarySearchTree('N')
+
+# for name_1 in names_1:
+#     bst.insert(name_1)
+
+# for name_2 in names_2:
+#     if bst.contains(name_2):
+#         duplicates.append(name_2)
+
+
+# MY OPTIMIZATION-2 .014 sec vs 7 seconds for the unoptimized version
 # cache = {}
 # for name in names_1:
 #     if name not in cache:
@@ -36,9 +48,10 @@ duplicates = []  # Return the list of duplicates in this data structure
 # What's the best time you can accomplish?  Thare are no restrictions on techniques or data
 # structures, but you may not import any additional libraries that you did not write yourself.
 
-duplicates = list(set(names_1).intersection(names_2)) #runtime: 0.008610963821411133 seconds
+# runtime: 0.008610963821411133 seconds
+duplicates = list(set(names_1).intersection(names_2))
 
 
 end_time = time.time()
-print (f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
-print (f"runtime: {end_time - start_time} seconds")
+print(f"{len(duplicates)} duplicates:\n\n{', '.join(duplicates)}\n\n")
+print(f"runtime: {end_time - start_time} seconds")
